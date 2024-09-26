@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>282</x>
+      <y>798</y>
+      <w>276</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Recette
+--
++getNom():String
++setNom(nom: String):void
++getDetail():String
++setDetail(detail:String):void
++getPreparation():String
++setPreparation(preparation:String):void
++getNombrePersonnes():Integer
++setNombrePersonnes(nombrePersonnes: Integer):void
++getComposnants():List&lt;Composant&gt;
++addComposant(composant:Composant):void
++addComposant(position:int, composant:Composant):void
++removeComposant(position:int):void
++moveComposant(positionDepart:int, positionArrviee:int):void
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>990</x>
+      <y>792</y>
+      <w>258</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Ingrédient
+--
++getNom():String
++setNom(nom: String):void
++getDetail():String
++setDetail(detail:String):void
++getRecette():Recette
++setRecette(recette: Recette):void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>552</x>
+      <y>846</y>
+      <w>120</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+m1=1..1
+m2=1..n
+contient
+{ordered}
+{deletecascade}</panel_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>792</y>
+      <w>258</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Composant
+--
++getNumero():Integer
++getQuantite():Double
++setQuantite(quantite: Double):void
++getCommentaire():String
++setCommentaire(commentaire:String):void
++getInredient():Ingredient
++getUnite():Unite
++setUnite(unite: Unite):void
++update(Composant)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>990</x>
+      <y>930</y>
+      <w>138</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Unite
+--
++getCode():String
++set(code: String):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>858</x>
+      <y>918</y>
+      <w>144</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..1
+m2=0..n
+possède</panel_attributes>
+    <additional_attributes>220.0;90.0;10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>912</x>
+      <y>846</y>
+      <w>90</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..1
+m2=1..n
+utilise</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>54</x>
+      <y>666</y>
+      <w>138</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Identifiant
+--
++getUUID():String
++getVersion():Long</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>282</x>
+      <y>570</y>
+      <w>270</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>_Recette de cuisine - Diagramme de classe des interfaces_
+Dominique Huguenin (dominqiue.huguenin AT rpn.ch)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>756</y>
+      <w>630</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+prépare avec
+m1=0..1
+m2=0..1</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;20.0;1000.0;20.0;1000.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>24</x>
+      <y>636</y>
+      <w>228</w>
+      <h>462</h>
+    </coordinates>
+    <panel_attributes>core.domain</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>270</x>
+      <y>636</y>
+      <w>1020</w>
+      <h>462</h>
+    </coordinates>
+    <panel_attributes>recette.domain</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>54</x>
+      <y>732</y>
+      <w>162</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>template=T:Object
+&lt;&lt;interface&gt;&gt;
+Entite
+--
++getIdendifiant():Identifiant
++getAudit():Audit
++update(T):void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>714</y>
+      <w>18</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>186</x>
+      <y>750</y>
+      <w>216</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;80.0;70.0;340.0;10.0;340.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>186</x>
+      <y>738</y>
+      <w>960</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;80.0;70.0;340.0;10.0;1580.0;10.0;1580.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>186</x>
+      <y>726</y>
+      <w>1092</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;80.0;70.0;330.0;10.0;1800.0;10.0;1800.0;400.0;1570.0;400.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>240</y>
+      <w>276</w>
+      <h>186</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Recette
+--
++getNom():String
++setNom(nom: String):void
++getDetail():String
++setDetail(detail:String):void
++getPreparation():String
++setPreparation(preparation:String):void
++getNombrePersonnes():Integer
++setNombrePersonnes(nombrePersonnes: Integer):void
++getComposnants():List&lt;Composant&gt;
++addComposant(composant:Composant):void
++addComposant(position:int, composant:Composant):void
++removeComposant(position:int):void
++moveComposant(positionDepart:int, positionArrviee:int):void
+
++getIdendifiant():Identifiant
++update(Recette):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>978</x>
+      <y>234</y>
+      <w>258</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Ingrédient
+--
++getNom():String
++setNom(nom: String):void
++getDetail():String
++setDetail(detail:String):void
++getRecette():Recette
++setRecette(recette: Recette):void
+
++getIdendifiant():Identifiant
++update(Ingrédient):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>288</y>
+      <w>120</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+m1=1..1
+m2=1..n
+contient
+{ordered}
+{deletecascade}</panel_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>648</x>
+      <y>234</y>
+      <w>258</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Composant
+--
++getNumero():Integer
++getQuantite():Double
++setQuantite(quantite: Double):void
++getCommentaire():String
++setCommentaire(commentaire:String):void
++getInredient():Ingredient
++getUnite():Unite
++setUnite(unite: Unite):void
++update(Composant)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>978</x>
+      <y>372</y>
+      <w>138</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Unite
+--
++getCode():String
++set(code: String):void
+
++getIdendifiant():Identifiant
++update(Unite):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>846</x>
+      <y>360</y>
+      <w>144</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..1
+m2=0..n
+possède</panel_attributes>
+    <additional_attributes>220.0;90.0;10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>900</x>
+      <y>288</y>
+      <w>90</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..1
+m2=1..n
+utilise</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>42</x>
+      <y>108</y>
+      <w>138</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Identifiant
+--
++getUUID():String
++getVersion():Long
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>270</x>
+      <y>12</y>
+      <w>270</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>_Recette de cuisine - Diagramme de classe des interfaces_
+Dominique Huguenin (dominqiue.huguenin AT rpn.ch)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>468</x>
+      <y>198</y>
+      <w>630</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+prépare avec
+m1=0..1
+m2=0..1</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;20.0;1000.0;20.0;1000.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>12</x>
+      <y>78</y>
+      <w>228</w>
+      <h>462</h>
+    </coordinates>
+    <panel_attributes>core.domain</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>258</x>
+      <y>78</y>
+      <w>1020</w>
+      <h>462</h>
+    </coordinates>
+    <panel_attributes>recette.domain</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>174</x>
+      <y>144</y>
+      <w>234</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;370.0;10.0;370.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>174</x>
+      <y>120</y>
+      <w>1098</w>
+      <h>306</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;1810.0;10.0;1810.0;490.0;1570.0;490.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>174</x>
+      <y>132</y>
+      <w>942</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;1550.0;10.0;1550.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>48</x>
+      <y>906</y>
+      <w>144</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Audit
+--
++getDateCreation():Instant
++getUserCreation():String
++getDateModification():Instant
++getUserModification():String
++getDateSupperssion():Instant
++getUserSupperssion():String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>840</y>
+      <w>18</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

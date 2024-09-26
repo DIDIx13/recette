@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>36</x>
+      <y>60</y>
+      <w>324</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>_Recette de cuisine - Diagramme de classe de la persistance en mémoire_
+Dominique Huguenin (dominique.huguenin AT rpn.ch)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>624</x>
+      <y>444</y>
+      <w>204</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>RecetteMapperImpl
+--
+-mapperManager:MemoryMapperManagerImpl
+--
+RecetteMapperImpl(MemoryMapperManager)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>444</y>
+      <w>204</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>UniteMapperImpl
+--
+-mapperManager:MemoryMapperManagerImpl
+--
+UniteMapperImpl(MemoryMapperManager)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1050</x>
+      <y>444</y>
+      <w>210</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>IngredientMapperImpl
+--
+-mapperManager:MemoryMapperManagerImpl
+--
+IngredientMapperImpl(MemoryMapperManager)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>606</y>
+      <w>204</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+UniteMapper
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>624</x>
+      <y>606</y>
+      <w>204</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+RecetteMapper
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1050</x>
+      <y>606</y>
+      <w>210</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IngredientMapper
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>348</x>
+      <y>606</y>
+      <w>258</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+MapperManager
+--
++getUniteMapper():UniteMapper 
++getIngredientMapper():IngredientMapper 
++getRecetteMapper():RecetteMapper 
++getDatabaseSetup():DatabaseSetup</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>348</x>
+      <y>444</y>
+      <w>258</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>MemoryMapperManagerImpl
+--
+-demoData:DemoData
+
+--
++MemoryMapperManager(DemoData)
++getDemoData():DemoData
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>312</x>
+      <y>114</y>
+      <w>1020</w>
+      <h>444</h>
+    </coordinates>
+    <panel_attributes>recette.datasource.memory
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>312</x>
+      <y>570</y>
+      <w>1020</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>recette.datasource
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>468</x>
+      <y>528</y>
+      <w>18</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>528</y>
+      <w>18</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>966</x>
+      <y>528</y>
+      <w>18</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1188</x>
+      <y>528</y>
+      <w>18</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>36</x>
+      <y>114</y>
+      <w>258</w>
+      <h>648</h>
+    </coordinates>
+    <panel_attributes>core.datasouce</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>78</x>
+      <y>588</y>
+      <w>204</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>template=E: Entite
+&lt;&lt;Interface&gt;&gt;
+Mapper
+--
++create(E entite):E 
+    throws PersistenceException
++retrieve(Identifiant id):E 
+    throws PersistenceException
++retrieve(String filtre):List&lt;E&gt;
+    throws PersistenceException
++update(E entite):void 
+    throws PersistenceException
++delete(E entite):void 
+    throws PersistenceException</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>252</x>
+      <y>666</y>
+      <w>492</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+bind E-&gt;Recette</panel_attributes>
+    <additional_attributes>10.0;40.0;800.0;40.0;800.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>252</x>
+      <y>666</y>
+      <w>702</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+bind E-&gt;Unite</panel_attributes>
+    <additional_attributes>10.0;70.0;1150.0;70.0;1150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>252</x>
+      <y>666</y>
+      <w>918</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+bind E-&gt;Ingredient</panel_attributes>
+    <additional_attributes>10.0;100.0;1510.0;100.0;1510.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>78</x>
+      <y>492</y>
+      <w>180</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Exception&gt;&gt;
+PersistenceException
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>168</x>
+      <y>534</y>
+      <w>18</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>492</x>
+      <y>414</y>
+      <w>246</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+ingredientMapper</panel_attributes>
+    <additional_attributes>390.0;50.0;390.0;20.0;10.0;20.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>402</y>
+      <w>474</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+uniteMapper</panel_attributes>
+    <additional_attributes>770.0;70.0;770.0;20.0;10.0;20.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>462</x>
+      <y>390</y>
+      <w>708</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+ingredientMapper</panel_attributes>
+    <additional_attributes>1160.0;90.0;1160.0;20.0;10.0;20.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>348</x>
+      <y>294</y>
+      <w>258</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>DatabaseSetupImpl
+--
+-mapperManager:MemoryMapperManager
+--
+DatabaseSetupImpl(MemoryMapperManager)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>360</y>
+      <w>78</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r1=databaseSetup</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>264</x>
+      <y>330</y>
+      <w>96</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>78</x>
+      <y>294</y>
+      <w>192</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+DatabaseSetup
+--
++createTables():void
+    throw PersistenceException
++dropTables():void
+    throw PersistenceException
++insertData():void
+    throw PersistenceException</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>48</x>
+      <y>138</y>
+      <w>234</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>template=O:Operation
+&lt;&lt;interface&gt;&gt;
+TransactionManager
+--
++executeTransaction(final O operation)
+       :Object
+        throws PersistenceException;
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>54</x>
+      <y>204</y>
+      <w>192</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>template=M:Object
+&lt;&lt;interface&gt;&gt;
+Operaction
+--
++execute(M mapperManager):Object 
+     throws PersistenceException;
+layer=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>348</x>
+      <y>180</y>
+      <w>216</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;singleton&gt;&gt;
+MemoryTransactionManager
+--
+_-transactionManager:MemoryTransactionManager_
+-demoData:DemoData
+--
+-MemoryTransactionManager(DemoData)
+_+getInstance(DemoData): TransactionManager_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>246</x>
+      <y>222</y>
+      <w>114</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+</diagram>
