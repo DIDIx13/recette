@@ -1,0 +1,16 @@
+<%@ page pageEncoding="UTF-8" %><%--
+--%><%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<small>
+    <c:if test="${detail.identifiant != null}">
+        ${detail.identifiant.UUID};&nbsp;
+        version: ${detail.identifiant.version};&nbsp;
+    </c:if>
+    <c:if test="${detail.audit != null}">
+        Création: ${detail.audit.userCreation},&nbsp;
+        ${detail.audit.dateCreation};&nbsp;
+        <c:if test="${detail.audit.dateModification != null}">
+            Modification: ${detail.audit.userModification},&nbsp;
+            ${detail.audit.dateModification};&nbsp;
+        </c:if>
+    </c:if>
+</small>

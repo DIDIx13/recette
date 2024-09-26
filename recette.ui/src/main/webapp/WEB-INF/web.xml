@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>Accueil</servlet-name>
+        <jsp-file>/WEB-INF/accueil.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>Administration-datasource</servlet-name>
+        <jsp-file>/WEB-INF/database.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Accueil</servlet-name>
+        <url-pattern>/accueil.html</url-pattern>
+        <url-pattern>/index.html</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Administration-datasource</servlet-name>
+        <url-pattern>/administration/datasource.html</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    <error-page>
+        <error-code>400</error-code>
+        <location>/WEB-INF/erreurHTTP.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/erreurHTTP.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/WEB-INF/erreurHTTP.jsp</location>
+    </error-page>
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/WEB-INF/erreurException.jsp</location>
+    </error-page>
+    
+</web-app>

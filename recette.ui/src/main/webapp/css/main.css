@@ -1,0 +1,177 @@
+body {
+    font: normal 100% sans-serif;
+    margin: 1rem;
+}
+
+.FenetreModale {
+    /*     visibility: hidden; */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    background-color: whitesmoke;
+    opacity:0.9;
+}
+
+/*.FenetreModale div*/
+.FenetreModale-dialog {
+    max-width: 60%; /* 300px; */
+    max-height: 40%; /*300px; */
+    margin: 5% auto;
+    background-color: white;
+    border:1px solid #000;
+    padding:1%;
+    overflow : auto;
+}
+
+:required {
+    border-color: red;
+}
+
+body > nav > ul  {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+
+body > nav > ul > li  {
+    padding-right: .5rem;
+}
+
+body > nav > ul > li:nth-child(n+2):before {
+    content: "|";
+    padding-right: .5rem;
+}
+
+.item-list {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+
+.item-list > * {
+    border: 1px solid #ccc;
+    padding: .5rem;
+    flex-basis: 25rem;
+}
+
+.item-list > article > header > * {
+    margin: 0;
+}
+
+small {
+    font-size: .5rem;
+}
+
+
+.form-recherche {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-recherche  input {
+    flex-grow: 2;
+}
+
+.form-recherche * {
+    margin-top: 0.5rem;
+
+}
+
+.grid-form {
+    display: grid;
+    grid-template-columns: [first] 1fr [control] 1fr 1fr 2fr 1fr [end];  
+    row-gap: .5em;
+    column-gap: .5em;    
+}
+
+.grid-form > nav, .grid-form > small {
+    grid-column: first / end;
+    grid-row: auto;    
+
+}
+
+.grid-form > label {
+    grid-column: first;
+    grid-row: auto;    
+}
+
+.grid-form  > input,
+.grid-form  > span,
+.grid-form  > textarea {
+    grid-column: control /end;
+    grid-row: auto;    
+}
+
+
+.grid-form  span {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center
+}
+
+.grid-form  span > *{
+    margin-right: 0.5em
+}
+
+.grid-form  span > input{
+    flex-grow: 1;
+}
+
+.grid-form > section {
+    grid-column: first / end;
+    grid-row: auto;    
+
+    display: grid;
+    grid-template-columns: subgrid;
+    row-gap: .5em;
+    column-gap: .5em;    
+
+}
+
+.grid-form > section > .new_row{
+    grid-column: first;
+    grid-row: auto;    
+}
+
+.grid-form > section >h3{
+    grid-column: first / end;
+    grid-row: auto;    
+}
+
+@media( max-width : 1200px){
+    .grid-form > section {
+        display: grid;
+        grid-template-columns: [first] 1fr 1fr [end];    
+    }
+
+}
+
+@media( max-width : 500px){
+    .grid-form {
+        display: grid;
+        grid-template-columns: [first control] 1fr [end];    
+    }
+
+    .grid-form > section {
+        grid-template-columns: subgrid;
+    }
+
+}
+
+@media print {
+    nav, 
+    aside, 
+    h2 + form,
+    a {
+        display: none;
+
+    }
+    
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/recette.ui">
+    <!-- datasource en base de données -->
+    <!--
+    <Resource auth="Container" driverClassName="org.postgresql.Driver" 
+                      maxIdle="10" maxTotal="200" maxWait="-1" 
+                      name="jdbc/db" 
+                      username="recette" 
+                      password="recettepass" 
+                      type="javax.sql.DataSource" 
+                      url="jdbc:postgresql://db.lxd:5432/recetteRestDB"/>
+            
+    <Parameter name="transactionManagerFactoryClass" override="false" 
+                       value="recette.datasource.db.TransactionManagerFactory"/>
+    -->
+    <!-- datasource rest-->
+
+       <Environment name="restServiceBaseUrl" override="false" 
+                    type="java.lang.String" value="http://localhost:8080/recette.rest/resources"/>
+                         
+                    
+       <Parameter name="transactionManagerFactoryClass" override="false" 
+                  value="recette.datasource.rest.TransactionManagerFactory"/>
+
+    <!-- datasource en mémoire -->
+<!--
+    <Parameter name="transactionManagerFactoryClass"
+                   value="recette.datasource.memory.TransactionManagerFactory"
+                   override="false"/>    
+-->
+</Context>
+
